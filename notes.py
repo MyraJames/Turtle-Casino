@@ -8,6 +8,7 @@ tokens = 1500
 print("Welcome to Turtle Casino lets play Turtle Slots!")
 print("Your balance is currently $"+str(tokens)+"!")
 
+
 shape1 = Turtle()
 shape2 = Turtle()
 shape3 = Turtle()
@@ -25,6 +26,9 @@ shape3.goto(100,0)
 
 shapelist = ["square", "circle", "triangle"]
 
+shape1.color("red")
+shape2.color("blue")
+shape3.color("yellow")
 
 while True:
     print("welcome to turtle slots")
@@ -48,11 +52,11 @@ while True:
         else:
             tokens -= bet
             result1 = random.choice(shapelist)
-            shape1.shape()
+            shape1.shape(result1)
             result2 = random.choice(shapelist)
-            shape2.shape()
+            shape2.shape(result2)
             result3 = random.choice(shapelist)
-            shape3.shape()
+            shape3.shape(result3)
 
 
         if result1 == result2 and result2 == result3:
@@ -61,5 +65,7 @@ while True:
             tokens += amountwon
         else:
             print("You lost this time.")  
-print("You are out of tokens")  
-print("Thank you for playing")
+            print("You are out of tokens")  
+            print("Thank you for playing")
+
+
